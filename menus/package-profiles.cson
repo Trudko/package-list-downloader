@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Enable package-profiles': 'package-profiles:toggle'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'package-profiles'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'package-profiles:toggle' }
+      ]
+    ]
+  }
+]
