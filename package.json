@@ -3,12 +3,13 @@
   "main": "./lib/package-profiles",
   "version": "0.0.0",
   "description": "A short description of your package",
-  "activationEvents": ["package-profiles:toggle"],
+  "activationEvents": ["package-profiles:Load-profile-list"],
   "repository": "https://github.com/atom/package-profiles",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
   },
   "dependencies": {
+    "atom-helpers": ">= 1.0.0 < 2.0.0"
   }
 }
