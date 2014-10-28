@@ -1,10 +1,10 @@
 {
-  "name": "package-profiles",
-  "main": "./lib/package-profiles",
+  "name": "package-list",
+  "main": "./lib/package-list",
   "version": "0.0.0",
   "description": "A short description of your package",
-  "activationEvents": ["package-profiles:Load-profile-list"],
-  "repository": "https://github.com/atom/package-profiles",
+  "activationEvents": ["package-list:Load-package-lists"],
+  "repository": "https://github.com/Trudko/package-list",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
