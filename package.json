@@ -10,6 +10,7 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "atom-helpers": ">= 1.0.0 < 2.0.0"
+    "atom-helpers": ">= 1.0.0 < 2.0.0",
+    "request": ">= 2.47.0 < 3.0.0"
   }
 }
