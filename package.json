@@ -3,7 +3,7 @@
   "main": "./lib/package-list",
   "version": "0.0.0",
   "description": "A short description of your package",
-  "activationEvents": ["package-list:Load-package-lists"],
+  "activationEvents": ["package-list:Load-package-lists", "package-list:Load-custom-list"],
   "repository": "https://github.com/Trudko/package-list",
   "license": "MIT",
   "engines": {
