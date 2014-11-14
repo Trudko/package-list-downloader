@@ -13,8 +13,9 @@ class PackageListCustomListView extends View
         @span class: 'pull-right', =>
           @button class: 'btn btn-error inline-block-tight gp-cancel-button', click: 'abort', 'Cancel'
 
-  confirmList: ->
-    utils.loadPackageListFromGIst @gistUrl.text()
+  confirmList: ->    
+    wasListLoaded = utils.loadPackageListFromGIst @gistUrl.text()
+    @detach() if wasListLoaded
 
   initialize: ->
     atom.workspaceView.append this
