@@ -6,7 +6,15 @@ class PackageListCustomListView extends View
 
   @content: ->
     @div class: 'overlay from-top', =>
-      @subview 'tagName', new EditorView(mini: true, placeholderText: 'Link to gist with packages')
+      @subview 'gistUrl', new EditorView(mini: true, placeholderText: 'ID of Gist with packages list.')
+      @div class: 'block', =>
+        @span class: 'pull-left', =>
+          @button class: 'btn btn-success inline-block-tight gp-confirm-button', click: 'confirmList', 'Confirm'
+        @span class: 'pull-right', =>
+          @button class: 'btn btn-error inline-block-tight gp-cancel-button', click: 'abort', 'Cancel'
+
+  confirmList: ->
+    utils.loadPackageListFromGIst @gistUrl.text()
 
   initialize: ->
     atom.workspaceView.append this
