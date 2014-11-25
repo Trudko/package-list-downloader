@@ -1,5 +1,6 @@
 {$, View} = require 'atom'
 utils = require './Utils'
+StatusView = require('./status-view')
 
 module.exports=
 class PackageListPackagesView extends View
@@ -16,12 +17,7 @@ class PackageListPackagesView extends View
           @span class: 'pull-right', =>
             @button class: 'btn btn-error inline-block-tight gp-cancel-button', click: 'abort', 'Cancel'
     else
-      @div class: 'overlay from-top', id: 'package-list-container', =>
-        @div class: 'block', =>
-          @span class: 'text-info', 'All package from the list are already installed!'
-        @div class: 'block', =>
-          @button class: 'btn btn-info inline-block-tight gp-confirm-button', click: 'abort', 'Confirm'
-
+      new StatusView({type: 'alert', message: 'All packages from the list are already installed!'})
 
   activatePackage: ->
     packageItem = event.target
