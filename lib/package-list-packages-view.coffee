@@ -16,8 +16,12 @@ class PackageListPackagesView extends View
           @span class: 'pull-right', =>
             @button class: 'btn btn-error inline-block-tight gp-cancel-button', click: 'abort', 'Cancel'
     else
-      @div
-      utils.displayMessage('All package from the list are already installed!', 1500)
+      @div class: 'overlay from-top', id: 'package-list-container', =>
+        @div class: 'block', =>
+          @span class: 'text-info', 'All package from the list are already installed!'
+        @div class: 'block', =>
+          @button class: 'btn btn-info inline-block-tight gp-confirm-button', click: 'abort', 'Confirm'
+
 
   activatePackage: ->
     packageItem = event.target
