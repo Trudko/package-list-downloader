@@ -6,7 +6,6 @@ module.exports=
 class PackageListPackagesView extends View
 
   @content: (items) ->
-    if items.length > 0
       @div class: 'overlay from-top select-list', id: 'package-list-container', =>
         @ol class: 'list-group mark-active', =>
           for item in items
@@ -16,8 +15,6 @@ class PackageListPackagesView extends View
             @button class: 'btn btn-success inline-block-tight gp-confirm-button', click: 'confirmList', 'Confirm'
           @span class: 'pull-right', =>
             @button class: 'btn btn-error inline-block-tight gp-cancel-button', click: 'abort', 'Cancel'
-    else
-      new StatusView({type: 'alert', message: 'All packages from the list are already installed!'})
 
   activatePackage: ->
     packageItem = event.target
