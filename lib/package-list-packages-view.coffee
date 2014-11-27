@@ -10,7 +10,7 @@ class PackageListPackagesView extends View
         @ol class: 'list-group mark-active', =>
           for item in items
             @li class: 'active', click: 'activatePackage', item
-        @div class: 'block', =>
+        @div class: 'block', style: 'padding-top: 10px', =>
           @span class: 'pull-left', =>
             @button class: 'btn btn-success inline-block-tight gp-confirm-button', click: 'confirmList', 'Confirm'
           @span class: 'pull-right', =>
