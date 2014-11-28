@@ -1,15 +1,11 @@
-# See https://atom.io/docs/latest/creating-a-package#menus for more details
-'context-menu':
-  '.overlayer':
-      'Enable package-profiles': 'package-profiles:toggle'
-
 'menu': [
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'package-profiles'
+      'label': 'Package Profiles Downloader'
       'submenu': [
-        { 'label': 'Toggle', 'command': 'package-profiles:toggle' }
+        { 'label': 'Download predefined list', 'command': 'package-list-downloader:load-predefined-list' },
+        { 'label': 'Download custom list', 'command': 'package-list-downloader:load-custom-list' }
       ]
     ]
   }
