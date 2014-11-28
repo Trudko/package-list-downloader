@@ -1,9 +1,9 @@
 {
-  "name": "package-list",
+  "name": "package-list-downloader",
   "main": "./lib/package-list",
   "version": "0.0.0",
   "description": "A short description of your package",
-  "activationEvents": ["package-list:load-predefined-list", "package-list:load-custom-list"],
+  "activationEvents": ["package-list-downloader:load-predefined-list", "package-list-downloader:load-custom-list"],
   "repository": "https://github.com/Trudko/package-list",
   "license": "MIT",
   "engines": {
