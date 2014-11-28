@@ -1,4 +1,4 @@
-# package-list package
+# package-list-downloader package
 
 Package helps download predefined and custom list of packages. This is useful in two cases:
 1. If you don't want to look around recommended packages for your programming language.

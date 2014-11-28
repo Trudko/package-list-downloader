@@ -1,8 +1,8 @@
 {
   "name": "package-list-downloader",
   "main": "./lib/package-list",
-  "version": "0.0.0",
-  "description": "A short description of your package",
+  "version": "0.1.0",
+  "description": "Package which helps you download recomended packages for your favorite technology or share your own custom list with other!",
   "activationEvents": ["package-list-downloader:load-predefined-list", "package-list-downloader:load-custom-list"],
   "repository": "https://github.com/Trudko/package-list",
   "license": "MIT",
