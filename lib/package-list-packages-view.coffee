@@ -27,9 +27,9 @@ class PackageListPackagesView extends View
     packagesToInstall = []
     for item in $("#package-list-container").find('.active')
       packagesToInstall.push item.innerHTML
-
-    utils.installPackageList packagesToInstall
     @detach()
+    utils.installPackageList packagesToInstall
+
 
   initialize: ->
     atom.workspaceView.append this
