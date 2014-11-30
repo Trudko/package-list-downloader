@@ -5,8 +5,9 @@ class ProgressBarView extends View
 
   @content: ->
     @div class: 'overlay from-top', =>
-      @span class: 'loading loading-spinner-small inline-block'
-      @span 'Name of package'
+      @span class: 'inline-block', 'Installing packages: '
+      @progress class: 'inline-block', max: '100', value: '0', outlet: 'progressBar'
+      @span class: 'inline-block', 'At 0%'
       @div class: 'pull-right', =>
         @button class: 'btn btn-success inline-block-tight gp-confirm-button', click: 'abort', 'Hide progress'
 
@@ -16,4 +17,7 @@ class ProgressBarView extends View
   abort: ->
     @detach()
 
-  changePackageName: ->
+  updateProgress: (percentage)  ->
+    progressBar = @progressBar[0]
+    progressBar.value = percentage
+    progressBar.nextSibling.innerText = 'At ' + percentage + '%'
