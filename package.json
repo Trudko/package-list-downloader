@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "Package which helps you download recomended packages for your favorite technology or share your own custom list with other!",
   "activationEvents": ["package-list-downloader:load-predefined-list", "package-list-downloader:load-custom-list"],
-  "repository": "https://github.com/Trudko/package-list",
+  "repository": "https://github.com/Trudko/package-list-downloader",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
