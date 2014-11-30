@@ -1,7 +1,7 @@
 {
   "name": "package-list-downloader",
   "main": "./lib/package-list-downloader",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Package which helps you download recomended packages for your favorite technology or share your own custom list with other!",
   "activationEvents": [
     "package-list-downloader:load-predefined-list",
