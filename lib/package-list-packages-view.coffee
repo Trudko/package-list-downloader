@@ -3,7 +3,7 @@ utils = require './Utils'
 StatusView = require('./status-view')
 
 module.exports=
-class PackageListPackagesView extends View
+class PackageListDownloaderPackagesView extends View
 
   @content: (items) ->
       @div class: 'overlay from-top select-list', id: 'package-list-container', =>

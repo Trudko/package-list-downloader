@@ -2,7 +2,7 @@
 utils = require './Utils'
 
 module.exports=
-class PackageListCustomListView extends View
+class PackageListDownloaderCustomListView extends View
 
   @content: ->
     @div class: 'overlay from-top', =>
