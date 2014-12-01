@@ -2,7 +2,7 @@
 
 Package helps download predefined and custom list of packages. This is useful in two cases:
 
-* If you don't want to look around recommended packages for your programming language.
+* If you don't want to look around for recommended packages for your programming language.
 
 ![](https://cloud.githubusercontent.com/assets/3289225/5237731/881873d4-789a-11e4-892c-9d6408a5c42f.gif) 
 
@@ -11,3 +11,5 @@ Package helps download predefined and custom list of packages. This is useful in
 ![](https://cloud.githubusercontent.com/assets/3289225/5237725/be0d3692-7899-11e4-9451-e8c4435f045c.gif) 
 
 More predefined list to come, feel free to post your favourite or your own packages for me to add to predefined lists.
+
+The package role isn't to replace oficial package manager. Goal is to make those two use cases bit more easier.  
