@@ -3,14 +3,14 @@ utils = require './Utils'
 StatusView = require('./status-view')
 
 module.exports=
-class PackageListPackagesView extends View
+class PackageListDownloaderPackagesView extends View
 
   @content: (items) ->
       @div class: 'overlay from-top select-list', id: 'package-list-container', =>
         @ol class: 'list-group mark-active', =>
           for item in items
             @li class: 'active', click: 'activatePackage', item
-        @div class: 'block', =>
+        @div class: 'block', style: 'padding-top: 10px', =>
           @span class: 'pull-left', =>
             @button class: 'btn btn-success inline-block-tight gp-confirm-button', click: 'confirmList', 'Confirm'
           @span class: 'pull-right', =>
@@ -27,9 +27,9 @@ class PackageListPackagesView extends View
     packagesToInstall = []
     for item in $("#package-list-container").find('.active')
       packagesToInstall.push item.innerHTML
-
-    utils.installPackageList packagesToInstall
     @detach()
+    utils.installPackageList packagesToInstall
+
 
   initialize: ->
     atom.workspaceView.append this

@@ -2,7 +2,7 @@
 utils = require './Utils'
 
 module.exports=
-class PackageListCustomListView extends View
+class PackageListDownloaderCustomListView extends View
 
   @content: ->
     @div class: 'overlay from-top', =>
@@ -14,8 +14,8 @@ class PackageListCustomListView extends View
           @button class: 'btn btn-error inline-block-tight gp-cancel-button', click: 'abort', 'Cancel'
 
   confirmList: ->
-    wasListLoaded = utils.loadPackageListFromGIst @gistUrl.text()
-    @detach() if wasListLoaded
+    utils.loadPackageListFromGIst @gistUrl.text()
+    @detach()
 
   initialize: ->
     @on 'core:cancel', => @detach()
